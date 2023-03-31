@@ -1,0 +1,8 @@
+boys = 0;
+girls = 0;
+For[i = 1, i <= 1000000, i++, 
+  While[True, child = RandomChoice[{"boy", "girl"}];
+   If[child == "boy", boys += 1;
+    Break[], girls += 1;
+    If[boys + girls == 1000000, Break[]]]]];
+Print["Final male to female ratio: ", N[boys/girls]]
